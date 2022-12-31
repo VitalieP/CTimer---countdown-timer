@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="src/initialize.js" ></script>
+    <script src="src/countdownTimer.js" defer></script>
+    <script src="src/newTimer.js" ></script>
+    <script>
+      window.addEventListener("load", timer.v.newTimer.setInterface);
+     </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="app-title">Countdown Timer</h1>
+    </header>
+
+    
+    <section class="timer-app">
+      <div>
+        <button id="open-btn" class="modal">Settings</button>
+        <div class="timer-nav">
+          <ul id="countdown" class="countdown">
+            <li><button type="button" id="practice" class="timer-nav  active"> Practice </button></li>
+            <li><button type="button" id="short_break" class="timer-nav"> Short Break </button></li>
+            <li><button type="button" id="long_break" class="timer-nav"> Long Break </button></li>
+          </ul>
+        </div>
+        <div class="timer">
+          <h1 id="timer-default">
+          <span id="hours">  </span>:
+          <span id="minutes">  </span>:
+          <span id="seconds">  </span>
+          </h1>
+        </div>
+      </div>
+        
+      <div id="container-modal">
+        <div id="modal-container">
+          <div id="modal">
+            <form action="" class="" id="setTimer">
+              <div class="form-input">
+                <label for="input_practice">Practice</label>
+              <input id="input_practice" type="number" step="1" min="1" >
+              </div>
+              <div class="form-input">
+                <label for="input_shortBreak">Short break</label>
+              <input id="input_shortBreak" type="number" step="1" min="1" >
+              </div>
+              <div class="form-input">
+                <label for="input_longBreak">Long break</label>
+              <input id="input_longBreak" type="number" step="1" min="1" >
+              </div>
+              
+            </form>
+          </div>
+          <div class="update">
+            <ul id="update-buttons" >
+              <li><button type="button" id="save_btn" class="" value="Save">Save</button></li>
+              <li><button type="button" id="reset_btn" class="">Reset</button></li>
+              
+            </ul>
+          </div>
+          <div id="close-btn">&times;</div>
+        </div>
+      </div>
+        
+      </div>
+      
+
+      <div class="buttons">
+        <button type="button" id="start" class="controls start" value="Start">Start</button>
+        <button type="button" id="stop" class="controls stop" value="Stop">Stop</button>
+        <button type="button" id="reset" class="controls reset" value="Reset">Reset</button>
+      </div>
+     
+     
+    </section>
+  </body>
+</html>

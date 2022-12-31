@@ -1,0 +1,185 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+.app-title {
+  margin: 0 auto;
+  text-align: center;
+  background-color: aquamarine;
+  color: rgb(85, 8, 8);
+  padding: 1em;
+}
+section.timer-app {
+  display: flex;
+  
+  flex-direction: column;
+  align-items: center;
+  
+  border: 10px rgb(14, 179, 69);
+  background-color: bisque;
+  padding: 3em;
+}
+ul#countdown  {
+  list-style-type: none;
+  display: flex;
+}
+ul#countdown button {
+  
+  background-color: rgb(8, 116, 116);
+  border: 1px solid bisque;
+  padding: 0.2em 6em;
+  color: white;
+}
+input {
+  
+  
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid gainsboro;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2em;
+}
+.controls {
+  padding: 0.4em 1.8em;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 1px 1px 15px rgb(148, 146, 146);
+  cursor: pointer;
+}
+.start {
+  background-color: green;
+  color: white;
+  
+}
+.stop {
+  background-color: red;
+  color: white;
+  
+}
+.reset {
+  background-color: gray;
+  color: white;
+}
+button.timer-nav:hover {
+  background-color: rgb(2, 95, 95);
+  cursor: pointer;
+}
+button.timer-nav:active {
+  background-color: rgb(2, 95, 95);
+  
+}
+
+#setTimer {
+  display: flex;
+  gap: 20px;
+
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+.timer {
+  font-size: 36px;
+  text-align: center;
+}
+#modal-container {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+
+  animation: animateModal;
+  animation-duration: .4s;
+}
+#modal-container ul {
+  list-style: none;
+}
+#close-btn {
+  font-size: 3rem;
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+}
+#container-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgb(0, 0, 0, .5);
+}
+
+/*modal animation*/
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}

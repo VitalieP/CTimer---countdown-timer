@@ -81,7 +81,11 @@ CTimer.playSound = function () {
 };
 
 // set default timer values in local storage
-if (!localStorage) {
+if (
+  !localStorage.getItem("practice") &&
+  !localStorage.getItem("shortBreak") &&
+  !localStorage.getItem("longBreak")
+) {
   localStorage.setItem("practice", '{"name":"practice","seconds":1500}');
   localStorage.setItem("shortBreak", '{"name":"shortBreak","seconds":300}');
   localStorage.setItem("longBreak", '{"name":"longBreak","seconds":600}');
